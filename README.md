@@ -143,11 +143,15 @@ A simple blog application built with Laravel 11 and PHP 8.4, containerized with 
 
 2. **Configure production environment**
    ```bash
+   # Create production config from template
+   cp .env.production.example .env.production
+   nano .env.production
+   
+   # Copy to active environment
    cp .env.production .env
-   nano .env
    ```
    
-   Update the following in `.env`:
+   Update the following in `.env.production`:
    - `APP_URL=http://your-ec2-public-ip` (or your domain)
    - `DB_HOST=your-rds-endpoint.region.rds.amazonaws.com`
    - `DB_PASSWORD=your-secure-rds-password`

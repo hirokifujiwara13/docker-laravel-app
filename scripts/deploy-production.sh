@@ -13,11 +13,20 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Check if .env.production exists
+# Check if .env.production exists, if not create from example
 if [ ! -f ".env.production" ]; then
-    echo -e "${RED}❌ .env.production file not found!${NC}"
-    echo "Please create .env.production with your RDS database settings."
-    exit 1
+    if [ -f ".env.production.example" ]; then
+        echo -e "${YELLOW}📋 Creating .env.production from example...${NC}"
+        cp .env.production.example .env.production
+        echo -e "${RED}❌ Please edit .env.production with your actual RDS settings before continuing!${NC}"
+        echo "Edit the file: nano .env.production"
+        echo "Then run this script again."
+        exit 1
+    else
+        echo -e "${RED}❌ .env.production.example file not found!${NC}"
+        echo "Please ensure you have the production environment template."
+        exit 1
+    fi
 fi
 
 echo -e "${YELLOW}📋 Pre-deployment checklist:${NC}"

@@ -154,17 +154,18 @@ sudo chown -R ec2-user:ec2-user /opt/laravel
 
 ## Step 5: Configure Production Environment
 
-### 5.1 Copy Production Environment File
+### 5.1 Create Production Environment File
 ```bash
-cp .env.production .env
+# Create .env.production from template
+cp .env.production.example .env.production
+
+# Edit with your actual RDS settings
+nano .env.production
 ```
 
 ### 5.2 Edit Environment Configuration
-```bash
-nano .env
-```
 
-**Update these values in .env:**
+**Update these values in .env.production:**
 ```bash
 # Application
 APP_NAME="Laravel Blog"

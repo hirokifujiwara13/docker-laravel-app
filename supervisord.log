@@ -84,3 +84,9 @@
 2025-08-12 01:16:04,094 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2025-08-12 01:16:05,098 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2025-08-12 01:16:05,098 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-12 02:16:06,931 INFO exited: laravel-worker_01 (exit status 0; expected)
+2025-08-12 02:16:06,932 INFO exited: laravel-worker_00 (exit status 0; expected)
+2025-08-12 02:16:06,940 INFO spawned: 'laravel-worker_00' with pid 291
+2025-08-12 02:16:06,941 INFO spawned: 'laravel-worker_01' with pid 292
+2025-08-12 02:16:07,944 INFO success: laravel-worker_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2025-08-12 02:16:07,945 INFO success: laravel-worker_01 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
